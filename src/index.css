@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Roobert font faces */
+@font-face {
+	font-family: 'Roobert';
+	src: url('./assets/fonts/robert/RoobertTRIAL-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roobert';
+	src: url('./assets/fonts/robert/RoobertTRIAL-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roobert Mono';
+	src: url('./assets/fonts/robert/RoobertMonoTRIAL-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Utility class for Roobert font */
+.font-roobert {
+	font-family: 'Roobert', sans-serif;
+}
+.font-roobert-mono {
+	font-family: 'Roobert Mono', monospace;
+}
+
