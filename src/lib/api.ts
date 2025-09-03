@@ -4,7 +4,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import type { AuthResponse, CreateBlog } from './data';
 // Create axios instance
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'https://centrisync.ai/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://api.centrilearn.com/api',
     // || 'http://localhost:3001/api',
     headers: {
         'Content-Type': 'application/json',
