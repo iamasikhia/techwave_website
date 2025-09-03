@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { authApi } from "@/lib/api";
 import { useAuthStore } from "@/stores/authStore";
 import { routes } from "@/lib/route";
-
+import Hello from "@/assets/images/blog.png";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,15 +73,7 @@ export default function Login() {
         </section>
 
         <section className="bg-white p-8 mt-8">
-          <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="hidden md:block">
-              <img
-                src="/src/assets/images/hello.png"
-                alt="welcome"
-                className="w-full rounded-lg shadow-md"
-              />
-            </div>
-
+          <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-8 items-center">
             <div className="w-full">
               <form
                 onSubmit={handleSubmit}
