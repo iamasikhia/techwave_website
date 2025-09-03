@@ -5,6 +5,7 @@ import type { AuthResponse, CreateBlog } from './data';
 // Create axios instance
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL || 'https://centrisync.ai/api',
+    // || 'http://localhost:3001/api',
     headers: {
         'Content-Type': 'application/json',
     },
@@ -146,6 +147,11 @@ export const blogApi = {
         return response.data;
     },
 
+    contactUs: async (data: { name: string; email: string; interest: string; budget: string; message: string }) => {
+        const response = await api.post('/auth/contact-us', data);
+        return response.data;
+    }
+
 };
 
 
@@ -231,6 +237,16 @@ export function useUnPublishBlog() {
         mutationFn: blogApi.unPublishBlog,
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['blogs'] });
+        },
+    });
+}
+
+export function useContactUs() {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: blogApi.contactUs,
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ['contact'] });
         },
     });
 }

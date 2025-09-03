@@ -12,6 +12,7 @@ import ProtectedRoute from './pages/dashboard/ProtectedRoute'
 import CreateBlog from './pages/dashboard/CreateBlog'
 import BlogDetails from './pages/BlogDetails'
 import { Toaster } from 'react-hot-toast';
+import Community from './pages/Community'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path={routes.login} element={<Login />} />
           <Route path={routes.about} element={<AboutUs />} />
           <Route path={routes.portfolio} element={<Portfolio />} />
+          <Route path={routes.community} element={<Community />} />
           <Route path={routes.blog} element={<Blog />} />
           <Route path={routes.blogDetails} element={<BlogDetails />} />
           <Route path={routes.contact} element={<ContactUs />} />

@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { authApi } from "@/lib/api";
 import { useAuthStore } from "@/stores/authStore";
 import { routes } from "@/lib/route";
-import Hello from "@/assets/images/blog.png";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

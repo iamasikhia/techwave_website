@@ -3,6 +3,7 @@ const login = '/login';
 const about = '/about-us';
 const portfolio = '/portfolio';
 const blog = '/blogs';
+const community = '/community';
 const blogDetails = '/blogs/:id';
 const contact = '/contact';
 const dashboardBlogs = '/dashboard/blogs';
@@ -22,4 +23,5 @@ export const routes = {
   editBlog,
   editBlogId,
   blogDetails,
+  community,
 };

@@ -24,7 +24,7 @@ export default function Header() {
     { label: 'Services', href: routes.about },
     { label: 'Portfolio', href: routes.portfolio },
     { label: 'Global Tech News', href: routes.blog },
-    { label: 'Community', href: '#why-centri' },
+    { label: 'Community', href: routes.community },
   ];
 
   // Smooth scroll helper

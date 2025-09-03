@@ -44,12 +44,12 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-[#338B74] text-white rounded-2xl px-8 py-2 h-10 text-base font-semibold">
+              <Link to={routes.contact} className="bg-[#338B74] text-white rounded-2xl px-8 py-2 h-10 text-base font-semibold">
                 Work With Us
-              </Button>
-              <Button className="bg-[#FFB804] text-white rounded-2xl px-8 py-2 h-10 text-base font-semibold">
+              </Link>
+              <Link to={routes.portfolio} className="bg-[#FFB804] text-white rounded-2xl px-8 py-2 h-10 text-base font-semibold">
                 See Our Solutions
-              </Button>
+              </Link>
             </div>
 
             <div className="relative max-w-4xl mx-auto mt-10">
