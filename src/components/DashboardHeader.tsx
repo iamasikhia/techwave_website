@@ -11,6 +11,8 @@ import { useAuthStore } from "@/stores/authStore";
 import { ChevronDown, LogOut } from "lucide-react";
 import LogoutConfirmModal from "./LogoutModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { routes } from "@/lib/route";
 
 export default function DashboardHeader() {
   const [showLogout, setShowLogout] = useState(false);
@@ -27,7 +29,9 @@ export default function DashboardHeader() {
       <div className="w-4/6 pointer-events-auto bg-white/90 backdrop-blur border border-white rounded-2xl max-w-8xl mx-auto px-2 h-16 shadow-sm transition-colors">
         <div className="w-full flex items-center justify-between h-16">
           <div className="flex items-center justify-center pr-12 lg:pr-40">
-            <img src={logo} alt="CentriSync Logo" className="" />
+            <Link to={routes.home}>
+              <img src={logo} alt="CentriSync Logo" className="" />
+            </Link>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

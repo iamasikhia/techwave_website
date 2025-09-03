@@ -1,5 +1,4 @@
 import HomeLayout from "../layouts/HomeLayout";
-import { Button } from "@/components/ui/button";
 import MapSvg from "@/assets/images/map.svg";
 import Company1 from "@/assets/images/1.svg";
 import Company2 from "@/assets/images/2.svg";
@@ -135,9 +134,9 @@ export default function Home() {
                     you scale smarter, faster, and with confidence.
                   </div>
 
-                  <Button className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
+                  <Link to={routes.contact} className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
                     Let's Build Smarter
-                  </Button>
+                  </Link>
                 </div>
 
                 <div className="relative mr-10 mb-0">
@@ -173,9 +172,9 @@ export default function Home() {
                     thrive in a digital-first world.
                   </div>
 
-                  <Button className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
+                  <Link to={routes.contact} className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
                     Transform With Us
-                  </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -195,9 +194,9 @@ export default function Home() {
                     go-to-market, scalable growth, and measurable impact.
                   </div>
 
-                  <Button className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
+                  <Link to={routes.contact} className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
                     Let's make it real
-                  </Button>
+                  </Link>
                 </div>
 
                 <div className="relative mr-10 mb-[-25px]">
@@ -272,9 +271,9 @@ export default function Home() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Button className="bg-[#338B74] text-white rounded-xl px-6 py-2 h-10 text-base font-semibold">
+              <Link to={routes.portfolio} className="bg-[#338B74] text-white rounded-xl px-6 py-2 h-10 text-base font-semibold">
                 See All Our Works
-              </Button>
+              </Link>
             </div>
           </div>
         </section>
