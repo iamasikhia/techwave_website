@@ -5,7 +5,7 @@ import type { AuthResponse, CreateBlog } from './data';
 // Create axios instance
 const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL || 'https://api.centrilearn.com/api',
-    // || 'http://localhost:3001/api',
+    // baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3001/api',
     headers: {
         'Content-Type': 'application/json',
     },
@@ -150,6 +150,11 @@ export const blogApi = {
     contactUs: async (data: { name: string; email: string; interest: string; budget: string; message: string }) => {
         const response = await api.post('/auth/contact-us', data);
         return response.data;
+    },
+
+    joinTechwaveCommunity: async (data: { email: string }) => {
+        const response = await api.post('/auth/join-techwave-community', data);
+        return response.data;
     }
 
 };
@@ -247,6 +252,16 @@ export function useContactUs() {
         mutationFn: blogApi.contactUs,
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['contact'] });
+        },
+    });
+}
+
+export function useJoinTechwaveCommunity() {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: blogApi.joinTechwaveCommunity,
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ['community'] });
         },
     });
 }

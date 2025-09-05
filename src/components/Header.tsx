@@ -21,7 +21,6 @@ export default function Header() {
   const navItems = [
     { label: 'Home', href: routes.home },
     { label: 'About Us', href: routes.about },
-    { label: 'Services', href: routes.about },
     { label: 'Portfolio', href: routes.portfolio },
     { label: 'Global Tech News', href: routes.blog },
     { label: 'Community', href: routes.community },
