@@ -7,7 +7,7 @@ import Explore from "@/assets/images/explore.png";
 import Strategize from "@/assets/images/strategize.png";
 import Implement from "@/assets/images/implement.png";
 import Deliver from "@/assets/images/deliver.png";
-import Ceo from "@/assets/images/ceo.svg";
+import Ceo from "@/assets/images/ceo.jpg";
 
 export default function AboutUs() {
   return (
@@ -175,7 +175,7 @@ export default function AboutUs() {
         <section className="bg-white">
           <div className="max-w-5xl mx-auto py-16 gap-8 flex justify-between items-center">
             <div className="text-5xl font-medium mb-6">
-                <img src={Ceo} alt="CEO" />
+                <img src={Ceo} alt="CEO" className="h-56 w-64 rounded-xl" />
                 <div className="text-3xl font-medium">
                     Asikhia Iseoluwa
                 </div>

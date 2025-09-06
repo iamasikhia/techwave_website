@@ -341,7 +341,7 @@ export default function CreateBlog() {
                     type="button"
                     onClick={() => removeTag(i)}
                     aria-label={`Remove ${t}`}
-                    className="text-amber-700/70 hover:text-amber-900 ml-1"
+                    className="text-amber-700/70 hover:text-amber-900 ml-1 cursor-pointer"
                   >
                     x
                   </button>

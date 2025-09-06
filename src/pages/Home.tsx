@@ -1,7 +1,7 @@
 import HomeLayout from "../layouts/HomeLayout";
 import MapSvg from "@/assets/images/map.svg";
-import Company1 from "@/assets/images/unilag.svg";
-import Company2 from "@/assets/images/2.svg";
+// import Company1 from "@/assets/images/unilag.svg";
+// import Company2 from "@/assets/images/2.svg";
 import Company3 from "@/assets/images/3.svg";
 // import Company4 from "@/assets/images/4.svg";
 import Company5 from "@/assets/images/5.svg";
@@ -213,9 +213,10 @@ export default function Home() {
             We're proud to support visionary brands globally, delivering
             solutions that create lasting impact.
           </div>
-          <div className="mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 justify-center align-center">
-            <img src={Company1} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
-            <img src={Company2} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
+          <div className="mt-12 max-w-4xl mx-auto flex gap-8 justify-center align-center">
+            {/* <img src={Company1} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
+            {/* <img src={Company4} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
+            {/* <img src={Company2} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
             <img src={Company3} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
             <img src={Company5} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
           </div>
