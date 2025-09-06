@@ -2,12 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import HomeLayout from "@/layouts/HomeLayout";
 import GeometricImage from "@/assets/images/geometric.png";
-import Product from "@/assets/images/product.svg";
 import Explore from "@/assets/images/explore.png";
 import Strategize from "@/assets/images/strategize.png";
 import Implement from "@/assets/images/implement.png";
 import Deliver from "@/assets/images/deliver.png";
 import Ceo from "@/assets/images/ceo.jpg";
+import StackedWhatWeDo from "@/components/StackedCards";
 
 export default function AboutUs() {
   return (
@@ -71,57 +71,14 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="bg-white px-4 md:px-16 py-16">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-5xl font-medium text-black mb-6">
-              What We Do
-            </h2>
-
-            <p className="mt-2 text-md text-[#404040]">
-              Every business challenge is an opportunity to innovate. Our team
-              blends strategy, technology, and execution to deliver AI
-              solutions, digital transformation, and product development that
-              give you the edge.
-            </p>
-
-            <div className="mt-10">
-              <div className="mx-12 rounded-t-full h-10 bg-[#FFEBB9]"></div>
-              <div className="h-10 mx-4 rounded-t-full bg-[#FFDCE3]"></div>
-              <div className="bg-[#E6FFF9] max-w-7xl mx-auto pt-12 pl-8 lg:pl-16 rounded-2xl">
-                <div className="grid lg:grid-cols-2 gap-12 items-center pt-10">
-                  <div className="text-left pb-10">
-                    <h2 className="text-3xl md:text-4xl font-medium text-black mb-6">
-                      Product Management & Development
-                    </h2>
-
-                    <div className="mt-2 text-md text-[#404040] mb-8 tracking-[0.2px] max-w-md">
-                      Ideas are easy. Execution wins. From strategy and
-                      roadmapping to design, build, and market launch, we take
-                      your concept and transform it into a product people
-                      love—and businesses rely on. Our end-to-end approach
-                      ensures faster go-to-market, scalable growth, and
-                      measurable impact.
-                    </div>
-
-                    <Button className="bg-[#338B74] text-white hover:bg-gray-800 rounded-2xl px-8 py-2 h-10 text-base font-semibold">
-                      Let's make it real
-                    </Button>
-                  </div>
-
-                  <div className="relative mr-10 mb-[-25px]">
-                    <img
-                      src={Product}
-                      alt="Product Management & Development"
-                      className="w-full h-auto rounded-t-lg"
-                    />
-                  </div>
-                </div>
-              </div>
+        <section className="bg-white px-4 md:px-16 py-16 pb-48">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* What we do section */}
+            <StackedWhatWeDo />
             </div>
-          </div>
         </section>
 
-        <section className="bg-[#FFEBB9] p-16 mt-16">
+        <section className="bg-[#FFEBB9] p-16 ">
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center space-around">
             <div className="max-w-xl mx-auto text-left pb-10 text-black">
               <div className="text-lg font-normal mb-6">Why?</div>
