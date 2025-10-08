@@ -3,6 +3,7 @@ import MapSvg from "@/assets/images/map.svg";
 // import Company1 from "@/assets/images/unilag.svg";
 // import Company2 from "@/assets/images/2.svg";
 import Company3 from "@/assets/images/3.svg";
+import company6 from "@/assets/images/7.svg";
 // import Company4 from "@/assets/images/4.svg";
 import Company5 from "@/assets/images/5.svg";
 import BlogImage from "@/assets/images/blog.png";
@@ -216,7 +217,7 @@ export default function Home() {
           <div className="mt-12 max-w-4xl mx-auto flex gap-8 justify-center align-center">
             {/* <img src={Company1} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
             {/* <img src={Company4} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
-            {/* <img src={Company2} alt="" className="company-logo hover:scale-110 transition-transform duration-300" /> */}
+            <img src={company6} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
             <img src={Company3} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
             <img src={Company5} alt="" className="company-logo hover:scale-110 transition-transform duration-300" />
           </div>
