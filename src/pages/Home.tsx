@@ -3,7 +3,7 @@ import MapSvg from "@/assets/images/map.svg";
 // import Company1 from "@/assets/images/unilag.svg";
 // import Company2 from "@/assets/images/2.svg";
 import Company3 from "@/assets/images/3.svg";
-import company6 from "@/assets/images/7.svg";
+import company6 from "@/assets/images/7.png";
 // import Company4 from "@/assets/images/4.svg";
 import Company5 from "@/assets/images/5.svg";
 import BlogImage from "@/assets/images/blog.png";
