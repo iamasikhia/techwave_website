@@ -108,7 +108,7 @@ export default function AboutUs() {
         </section>
 
         {/* What We Do */}
-        <section className="bg-white px-4 md:px-8 py-8 pb-48">
+        <section className="bg-white px-4 md:px-8 py-8">
           <div className="max-w-5xl mx-auto text-center">
             <StackedWhatWeDo />
           </div>
