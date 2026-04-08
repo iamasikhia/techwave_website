@@ -2,110 +2,90 @@ import logo from "@/assets/images/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { routes } from "@/lib/route";
 
+const navLinks = [
+  { label: "Home", href: routes.home },
+  { label: "About Us", href: routes.about },
+  { label: "Our Story", href: routes.ourStory },
+  { label: "Portfolio", href: routes.portfolio },
+  { label: "Tech News", href: routes.blog },
+  { label: "Community", href: routes.community },
+];
+
 export default function Footer() {
-    const location = useLocation()
+  const location = useLocation();
+
   return (
     <section>
-      <section className={`${location.pathname === routes.contact ? 'hidden' : ''} bg-[#338B74]`}>
-        <div className="flex justify-between items-center">
-          <div className="hidden lg:block">
-            <svg
-              width="362"
-              height="459"
-              viewBox="0 0 362 459"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M304.273 324.557C358.799 293.076 377.48 223.355 346 168.83L117.468 -227L-412.333 78.8807L-126.801 573.437L304.273 324.557Z"
-                fill="white"
-                fillOpacity="0.03"
-              />
-              <path
-                d="M248.634 299.077C303.159 267.596 321.841 197.875 290.36 143.35L86.7711 -209.277L-443.03 96.6034L-182.44 547.957L248.634 299.077Z"
-                fill="white"
-                fillOpacity="0.08"
-              />
-              <path
-                d="M207.566 256.088C250.613 231.236 265.361 176.192 240.509 133.146L53.8008 -190.241L-476 115.639L-244.292 516.969L207.566 256.088Z"
-                fill="white"
-                fillOpacity="0.06"
-              />
-            </svg>
+      {/* CTA Banner */}
+      {location.pathname !== routes.contact && (
+        <div className="relative bg-[#0f1f1a] overflow-hidden">
+          {/* Subtle geometric accent */}
+          <div className="absolute inset-0 pointer-events-none" aria-hidden>
+            <div className="absolute -left-32 -top-32 w-96 h-96 rounded-full bg-[#338B74]/10 blur-3xl" />
+            <div className="absolute -right-32 -bottom-32 w-96 h-96 rounded-full bg-[#338B74]/8 blur-3xl" />
+            <div className="absolute left-1/2 top-0 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-[#338B74]/20 to-transparent" />
           </div>
 
-          <div className="max-w-6xl mx-auto px-8 py-16 text-center">
-            <h1 className="text-4xl font-medium text-white mb-6 leading-tight">
-              Let's Build What's Next, Together.
-            </h1>
+          <div className="relative max-w-4xl mx-auto px-8 py-20 text-center">
+            <div className="inline-flex items-center gap-2 bg-[#338B74]/15 border border-[#338B74]/30 text-[#6ee7b7] text-sm font-medium rounded-full px-4 py-1.5 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6ee7b7] animate-pulse" />
+              Join the movement
+            </div>
 
-            <p className="text-lg text-white mb-8 max-w-3xl mx-auto tracking-[0.2px] font-normal">
-              Whether it's designing seamless user experiences, shaping digital
-              products, or exploring the future of tech — we're here to bring
-              ideas to life.
+            <h2 className="text-4xl md:text-5xl font-medium text-white mb-5 leading-tight tracking-tight">
+              Africa's entrepreneurs
+              <br />
+              <span className="text-[#338B74]">are ready to build.</span>
+            </h2>
+
+            <p className="text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+              Get access to technology training, a community of driven founders, and mentors
+              who have walked the path. Your next chapter starts here.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to={routes.contact} className="bg-[#FFB804] text-white rounded-2xl px-8 py-2 h-10 text-base font-semibold">
-                Contact Us
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                to={routes.community}
+                className="inline-flex items-center gap-2 bg-[#338B74] hover:bg-[#2a7562] text-white font-semibold rounded-full px-7 py-3 transition-all duration-200 hover:shadow-lg hover:shadow-[#338B74]/25"
+              >
+                Join the Community
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+              <Link
+                to={routes.contact}
+                className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-medium rounded-full px-7 py-3 transition-all duration-200"
+              >
+                Get in Touch
               </Link>
             </div>
           </div>
-
-          <div className="hidden lg:block">
-            <svg
-              width="390"
-              height="459"
-              viewBox="0 0 390 459"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M57.7268 346.557C3.20144 315.076 -15.4802 245.355 16 190.83L244.532 -205L774.333 100.881L488.801 595.437L57.7268 346.557Z"
-                fill="white"
-                fillOpacity="0.03"
-              />
-              <path
-                d="M113.366 321.077C58.8411 289.596 40.1594 219.875 71.6396 165.35L275.229 -187.277L805.03 118.603L544.44 569.957L113.366 321.077Z"
-                fill="white"
-                fillOpacity="0.08"
-              />
-              <path
-                d="M154.434 278.088C111.388 253.236 96.6389 198.192 121.492 155.146L308.199 -168.241L838 137.639L606.292 538.969L154.434 278.088Z"
-                fill="white"
-                fillOpacity="0.06"
-              />
-            </svg>
-          </div>
         </div>
-      </section>
-      <footer className="border-t border-gray-100 pt-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <img src={logo} alt="CentriSync Logo" />
-            </div>
+      )}
 
-            <nav className="flex justify-center items-center flex-wrap text-center align-center font-medium text-base text-[#404040] space-x-8 mb-4 md:mb-0">
-              <a href="#" className="hover:text-black">
-                Home
-              </a>
-              <a href="#" className="hover:text-black">
-                About Us
-              </a>
-              <a href="#" className="hover:text-black">
-                Services
-              </a>
-              <a href="#" className="hover:text-black">
-                Portfolio
-              </a>
-              <a href="#" className="hover:text-black">
-                Global Tech news
-              </a>
+      {/* Footer Bar */}
+      <footer className="bg-white border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <Link to={routes.home} className="flex items-center shrink-0">
+              <img src={logo} alt="Techwave Africa" className="h-7 w-auto" />
+            </Link>
+
+            <nav className="flex items-center flex-wrap justify-center gap-x-6 gap-y-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
-            <p className="text-[#404040] text-base font-medium">
-              © Copyright {new Date().getFullYear()} techwaveafrica.
+            <p className="text-sm text-gray-400 shrink-0">
+              © {new Date().getFullYear()} Techwave Africa
             </p>
           </div>
         </div>

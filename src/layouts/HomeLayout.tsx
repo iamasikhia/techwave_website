@@ -9,7 +9,7 @@ interface MainLayoutProps {
   bg?: string;
 }
 
-const HomeLayout = ({ children, bg='bg-gradient-to-r from-[#fffffe] via-[#fff8e7] to-[#ffebe9]' }: MainLayoutProps) => {
+const HomeLayout = ({ children, bg='bg-white' }: MainLayoutProps) => {
   const { pathname } = useLocation();
 
   useEffect(() => {

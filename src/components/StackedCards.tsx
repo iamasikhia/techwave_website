@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import Ai from "@/assets/images/ai.svg";
-import Digital from "@/assets/images/digital.svg";
-import Product from "@/assets/images/product.svg";
+import { useEffect, useRef } from "react";
+import TrainingIllustration from "@/components/illustrations/TrainingIllustration";
+import NetworkIllustration from "@/components/illustrations/NetworkIllustration";
+import MentorshipIllustration from "@/components/illustrations/MentorshipIllustration";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
@@ -9,207 +9,176 @@ import { routes } from "@/lib/route";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function StackedWhatWeDo() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const sectionRef = useRef<HTMLDivElement>(null);
+const works = [
+  {
+    id: "training",
+    color: "bg-[#FFFBEB]",
+    title: "Technology Enablement",
+    text: "Skills are the foundation of every successful business. We equip African entrepreneurs with practical, hands-on technology training - from no-code tools and digital marketing to software development and AI literacy. Our programs meet you where you are and build the confidence to compete globally.",
+    cta: "Start Learning",
+    Illustration: TrainingIllustration,
+  },
+  {
+    id: "network",
+    color: "bg-[#F0FDFA]",
+    title: "Community & Network",
+    text: "Building alone is hard. Building together is powerful. Our community connects ambitious entrepreneurs across Africa - sharing opportunities, resources, honest feedback, and the kind of real relationships that open doors. When one of us grows, we all grow.",
+    cta: "Join the Community",
+    Illustration: NetworkIllustration,
+  },
+  {
+    id: "mentorship",
+    color: "bg-[#FFF1F2]",
+    title: "Mentorship",
+    text: "Every great founder needs a guide. We connect entrepreneurs with experienced mentors - business leaders, tech veterans, and industry experts - who provide the strategic insight, honest advice, and lived experience needed to turn bold ideas into businesses that last.",
+    cta: "Find a Mentor",
+    Illustration: MentorshipIllustration,
+  },
+];
 
-  const works = [
-    {
-      id: "ai",
-      color: "bg-[#FFEBB9]",
-      title: "AI Integration",
-      text: "Turn possibilities into performance. We design and deploy tailored AI solutions that automate processes, enhance decision-making, and give your business a competitive edge. From intelligent chatbots to predictive analytics, we help you scale smarter, faster, and with confidence.",
-      cta: "Let's Build Smarter",
-      image: Ai,
-    },
-    {
-      id: "digital",
-      color: "bg-[#FFDCE3]",
-      title: "Digital Transformation",
-      text: "Don't just keep up—stay ahead. We reimagine your operations with smarter digital workflows that cut inefficiencies, boost productivity, and create seamless customer experiences. Whether it's upgrading legacy systems or building future-ready platforms, we equip your business to thrive in a digital-first world.",
-      cta: "Transform With Us",
-      image: Digital,
-    },
-    {
-      id: "product",
-      color: "bg-[#E6FFF9]",
-      title: "Product Management & Development",
-      text: "Ideas are easy. Execution wins. From strategy and roadmapping to design, build, and market launch, we take your concept and transform it into a product people love—and businesses rely on. Our end-to-end approach ensures faster go-to-market, scalable growth, and measurable impact.",
-      cta: "Let's make it real",
-      image: Product,
-    },
-  ];
+const CARD_FULL = 420;
+const CARD_BAR  = 56;
+
+export default function StackedWhatWeDo() {
+  const sectionRef  = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardsRef    = useRef<(HTMLDivElement | null)[]>([]);
+  const contentsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     if (!sectionRef.current || !containerRef.current) return;
 
-    // Initial setup - position cards in stack
-    cardsRef.current.forEach((card, index) => {
-      if (card) {
-        if (index === 0) {
-          // First card is active - HIGHEST z-index (on top)
-          gsap.set(card, {
-            y: 0,
-            scale: 1,
-            zIndex: 50, // Highest z-index for active card
-            opacity: 1,
-          });
-        } else {
-          // Future cards are hidden initially
-          gsap.set(card, {
-            y: 100,
-            scale: 1,
-            zIndex: 0,
-            opacity: 0,
-            height: 60,
-          });
-        }
-      }
+    const cards    = cardsRef.current;
+    const contents = contentsRef.current;
+    const n        = works.length;
+
+    // ── Initial state ────────────────────────────────────────────────
+    cards.forEach((card, i) => {
+      if (!card) return;
+      gsap.set(card, {
+        height:  i === 0 ? CARD_FULL : CARD_BAR,
+        y:       i === 0 ? 0 : 80,
+        opacity: i === 0 ? 1 : 0,
+        zIndex:  n - i,
+        width:   "100%",
+        left:    0,
+      });
+    });
+    contents.forEach((c, i) => {
+      if (!c) return;
+      gsap.set(c, { opacity: i === 0 ? 1 : 0 });
     });
 
-    // Create scroll trigger
+    // ── Build a scrubbed timeline ────────────────────────────────────
+    // Each transition occupies 1 unit of the timeline.
+    // Total duration = n - 1 units.
+    const tl = gsap.timeline({ paused: true });
+
+    for (let i = 0; i < n - 1; i++) {
+      const curr    = cards[i]!;
+      const next    = cards[i + 1]!;
+      const currCnt = contents[i]!;
+      const nextCnt = contents[i + 1]!;
+      const at      = i; // timeline position
+
+      // Fade out current card content
+      tl.to(currCnt, { opacity: 0, duration: 0.25, ease: "power2.in" }, at);
+
+      // Shrink current card to a bar and push it up
+      tl.to(curr, {
+        height:  CARD_BAR,
+        y:       -(i + 1) * (CARD_BAR + 8),
+        duration: 0.5,
+        ease:    "power2.inOut",
+      }, at + 0.1);
+
+      // Slide next card up and expand it
+      tl.to(next, {
+        opacity:  1,
+        y:        0,
+        height:   CARD_FULL,
+        duration: 0.6,
+        ease:     "power2.inOut",
+      }, at + 0.2);
+
+      // Fade in next card content after it has mostly expanded
+      tl.to(nextCnt, { opacity: 1, duration: 0.3, ease: "power2.out" }, at + 0.65);
+    }
+
+    // ── Attach to scroll ─────────────────────────────────────────────
     const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top center",
-      end: "bottom center",
-      scrub: 1,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const newIndex = Math.min(
-          Math.floor(progress * works.length),
-          works.length - 1
-        );
-
-        if (newIndex !== currentIndex) {
-          setCurrentIndex(newIndex);
-
-          // Animate cards
-          cardsRef.current.forEach((card, index) => {
-            if (card) {
-              if (index === newIndex) {
-                // Active card - full size with content, HIGHEST z-index (on top)
-                gsap.to(card, {
-                  scale: 1,
-                  y: 0,
-                  opacity: 1,
-                  height: 500,
-                  zIndex: 50, // Highest z-index for active card
-                  duration: 0.5,
-                  ease: "power2.out",
-                });
-              } else if (index < newIndex) {
-                // Past cards - thin bars stacked behind, oldest has LOWEST z-index
-                const offset = (newIndex - index) * 40;
-                gsap.to(card, {
-                  scale: 1,
-                  y: -offset,
-                  opacity: 1,
-                  height: 60,
-                  zIndex: 10 - (newIndex - index), // Oldest past card gets lowest z-index
-                  duration: 0.5,
-                  ease: "power2.out",
-                });
-              } else {
-                // Future cards - hidden or very low opacity
-                gsap.to(card, {
-                  scale: 1,
-                  y: 100,
-                  opacity: 0,
-                  height: 60,
-                  zIndex: 0,
-                  duration: 0.5,
-                  ease: "power2.out",
-                });
-              }
-            }
-          });
-        }
-      },
+      trigger:   sectionRef.current,
+      start:     "top 15%",
+      end:       "bottom 85%",
+      scrub:     1.2,          // lag in seconds — feels organic
+      animation: tl,
     });
 
     return () => {
       trigger.kill();
+      tl.kill();
     };
-  }, [currentIndex, works.length]);
+  }, []);
 
   return (
-    <div 
-       ref={sectionRef}
+    <div
+      ref={sectionRef}
       className="relative z-10 bg-white mb-64"
-      style={{ height: "220vh" }}
+      style={{ height: "230vh" }}
     >
       {/* Section Header */}
       <div className="text-center mb-4 px-4 pt-20">
-        <h2 className="text-3xl md:text-5xl font-medium text-black mb-6">
-          Our Expertise. Your Growth.
+        <div className="inline-flex items-center gap-2 bg-gray-100 border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-6 uppercase tracking-wider">
+          How We Support You
+        </div>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-950 mb-5 tracking-tight">
+          Three pillars. One mission.
         </h2>
-        <p className="text-lg text-[#404040] max-w-3xl mx-auto">
-          Every business challenge is an opportunity to innovate. Our team
-          blends strategy, technology, and execution to deliver AI solutions,
-          digital transformation, and product development that give you the
-          edge.
+        <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          We believe African entrepreneurs have everything it takes to build world-class businesses.
+          Our job is to give them the training, the network, and the mentors to make it happen.
         </p>
       </div>
 
-      {/* Sticky Cards Container */}
-      <div className="sticky top-24 h-[200px] flex items-center justify-center px-4 z-20">
-        <div ref={containerRef} className="relative w-full max-w-6xl mx-auto">
+      {/* Sticky container */}
+      <div className="sticky top-20 flex items-start justify-center px-4 z-20 pt-4">
+        <div ref={containerRef} className="relative w-full max-w-6xl mx-auto" style={{ height: `${CARD_FULL}px` }}>
           {works.map((work, index) => (
             <div
               key={work.id}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              className={`${work.color} absolute rounded-3xl overflow-hidden shadow-xl`}
-              style={{
-                height: index === currentIndex ? "400px" : "60px",
-                width: index === currentIndex 
-                  ? "100%" 
-                  : `${Math.max(60, 100 - (currentIndex - index) * 15)}%`, // Progressive width reduction
-                left: index === currentIndex 
-                  ? "0" 
-                  : `${Math.min(20, (currentIndex - index) * 7.5)}%`, // Center with progressive offset
-                right: index === currentIndex 
-                  ? "0" 
-                  : `${Math.min(20, (currentIndex - index) * 7.5)}%`, // Center with progressive offset
-              }}
+              ref={(el) => { cardsRef.current[index] = el; }}
+              className={`${work.color} absolute inset-x-0 rounded-3xl overflow-hidden shadow-xl`}
+              style={{ height: CARD_FULL }}
             >
-              {/* Show content only for active card */}
-              {index === currentIndex ? (
-                <div className="h-full grid lg:grid-cols-2 gap-8 items-center px-6 lg:px-12 py-8">
-                  {/* Content */}
-                  <div className="space-y-6">
-                    <h3 className="text-2xl lg:text-4xl font-medium text-black leading-tight">
-                      {work.title}
-                    </h3>
-                    <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
-                      {work.text}
-                    </p>
-                    <Link
-                      to={routes.contact}
-                      className="inline-block bg-[#338B74] text-white hover:bg-emerald-700 rounded-2xl px-6 py-3 font-medium transition-colors"
-                    >
-                      {work.cta}
-                    </Link>
-                  </div>
+              {/* Always-rendered content — opacity controlled by GSAP */}
+              <div
+                ref={(el) => { contentsRef.current[index] = el; }}
+                className="h-full grid lg:grid-cols-2 gap-8 items-center px-6 lg:px-12 py-8"
+                style={{ opacity: 0 }}
+              >
+                {/* Text */}
+                <div className="space-y-5">
+                  <h3 className="text-2xl lg:text-4xl font-medium text-gray-950 leading-tight">
+                    {work.title}
+                  </h3>
+                  <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
+                    {work.text}
+                  </p>
+                  <Link
+                    to={routes.contact}
+                    className="inline-flex items-center gap-2 bg-[#338B74] hover:bg-[#2a7562] text-white rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#338B74]/25"
+                  >
+                    {work.cta}
+                  </Link>
+                </div>
 
-                  {/* Image */}
-                  <div className="flex justify-center lg:justify-end">
-                    <div className="bg-white rounded-2xl p-4 lg:p-6 w-full max-w-sm lg:max-w-md h-48 lg:h-64 flex items-center justify-center shadow-sm">
-                      <img
-                        src={work.image}
-                        alt={work.title}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
+                {/* Illustration */}
+                <div className="flex justify-center lg:justify-end">
+                  <div className="bg-transparent rounded-2xl p-4 lg:p-6 w-full max-w-sm lg:max-w-md h-48 lg:h-64 flex items-center justify-center overflow-hidden">
+                    <work.Illustration />
                   </div>
                 </div>
-              ) : (
-                // For inactive cards, just show colored background (thin bar)
-                <div className="w-full h-full"></div>
-              )}
+              </div>
             </div>
           ))}
         </div>

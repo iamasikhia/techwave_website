@@ -63,7 +63,7 @@ export default function Login() {
               Login
             </Badge>
             <h1 className="text-3xl md:text-4xl font-semibold text-black mb-4 leading-tight">
-              Welcome back — sign in to continue
+              Welcome back. Sign in to continue
             </h1>
             <p className="text-sm text-gray-600">
               Enter your account details below.

@@ -1,60 +1,52 @@
 import Logistics from "@/assets/images/logistics.png"
-import Mantled from "@/assets/images/mantled.png"
-import Centri from "@/assets/images/centri.png"
+import Edify from "@/assets/images/edify.jpg"
 import Hello from "@/assets/images/hello.png"
-import Unilag from "@/assets/images/unilag.png"
 import Clearline from "@/assets/images/clearline.png"
-import Delivery from "@/assets/images/delivery.png"
 import Zikora from "@/assets/images/zikora.png"
+import WatergatePic from "@/assets/images/watergate-pic.jpg"
 
 export const works = [
     {
-        image: Logistics,
-        title: "Logistics Hub",
-        summary: "We consulted for a logistics company who were looking to build a mobile app to help its riders easily accept and complete orders. We also worked with them to deliver a client and admin platform to control the orders, riders, customers and more.",
-        technologies: ["Figma", "React", "Node js"]
+        image: WatergatePic,
+        title: "Watergate Fountain",
+        summary: "Watergate Fountain is a free entrepreneurship and research training programme equipping Nigerians with vocational and business skills. In four years, we have graduated 3,600 trainees: 2,600 entrepreneurs and 1,000 research students, creating meaningful employment pathways and driving economic growth driven by SDG 8: Decent Work and Economic Growth.",
+        technologies: ["Entrepreneurship Training", "Research", "Mentorship"],
+        link: null
     },
     {
-        image: Mantled,
-        title: "Mantled",
-        summary: "We consulted for a real estate entrepreneur who was looking to build an asset management tool. We developed a mobile app, its official website and web App for those accustomed to bigger screens.",
-        technologies: ["Figma", "React", "React native"]
+        image: Edify,
+        title: "Edify",
+        summary: "Founder consulted for Edify, a transformative initiative providing Christ-centered education to over 34,000 schools across Africa and Latin America, reaching 9 million+ children in 15+ countries. We led a capstone consultancy to integrate EdTech and AI into Edify's partner schools, designing scalable computer lab models, assessing country-level technology readiness, and mapping technology adoption for the years ahead.",
+        technologies: ["EdTech", "AI Integration", "Research & Data Analysis"],
+        link: "https://edify.org/"
+    },
+    {
+        image: Logistics,
+        title: "Logistics Hub",
+        summary: "Techwave partnered with Logistics Hub to help bring one of their flagship enterprise products to market across Africa. We led the engineering team to design, develop, and launch a mobile application on iOS and Android using Flutter, achieving 1,000+ active riders. Our work contributed to raising $200,000+ in funding and generating $50,000+ in annual revenue, delivering real economic impact for riders and businesses across the continent.",
+        technologies: ["Flutter", "iOS", "Android", "CI/CD"],
+        link: "https://logisticshub.tech/"
     },
     {
         image: Clearline,
-        title: "Clearline",
-        summary: "We consulted for a logistics company who were looking to build a mobile app to help its riders easily accept and complete orders. We also worked with them to deliver a client and admin platform to control the orders, riders, customers and more.",
-        technologies: ["Figma", "React", "Node.js"]
-    },
-    {
-        image: Unilag,
-        title: "Unilag Alumni",
-        summary: "Techwave consulted for one of the leading public universities to build a website, mobile app and admin app to run specific needed tasks for its alumni association.",
-        technologies: ["Figma", "React", "React Native", "Node js"]
+        title: "Clearline HMO",
+        summary: "Techwave consulted for Clearline HMO, one of Nigeria's growing health insurance providers serving hundreds of thousands of businesses and individuals. We built their mobile app and website, creating a seamless digital experience that makes quality healthcare plans accessible to more Nigerians across the country.",
+        technologies: ["Figma", "React", "React Native", "Node.js"],
+        link: "https://clearlinehmo.com/"
     },
     {
         image: Hello,
-        title: "Hello Money Mobile App",
-        summary: "We consulted for a logistics company who were looking to build a mobile app to help its riders easily accept and complete orders. We also worked with them to deliver a client and admin platform to control the orders, riders, customers and more.",
-        technologies: ["Figma", "React", "Node js"]
-    },
-    {
-        image: Centri,
-        title: "CentriSync",
-        summary: "We consulted for a logistics company who were looking to build a mobile app to help its riders easily accept and complete orders. We also worked with them to deliver a client and admin platform to control the orders, riders, customers and more.",
-        technologies: ["Figma", "React", "Node.js"]
-    },
-    {
-        image: Delivery,
-        title: "Delivery Connect",
-        summary: "We consulted for a logistics company who were looking to build a mobile app to help its riders easily accept and complete orders. We also worked with them to deliver a client and admin platform to control the orders, riders, customers and more.",
-        technologies: ["Figma", "React", "Node js"]
+        title: "Hello Money",
+        summary: "We supported Hello Money in building a mobile-first fintech experience designed to make financial services simple and accessible for everyday Africans. The platform empowers users to manage their money, make payments, and access financial tools, all from their phones.",
+        technologies: ["Figma", "React Native", "Node.js"],
+        link: "https://www.hellomemoney.com/"
     },
     {
         image: Zikora,
         title: "Zikora",
-        summary: "We consulted for a real estate entrepreneur who was looking to build an asset management tool. We developed a mobile app, its official website and web App for those accustomed to bigger screens.",
-        technologies: ["Figma", "React", "Node js"]
+        summary: "Techwave consulted for Zikora to help build their fintech product serving hundreds of thousands of customers across Africa. We worked to create a reliable, scalable platform that puts financial empowerment directly in the hands of African users, making savings, payments, and financial management truly accessible.",
+        technologies: ["Figma", "React", "Node.js"],
+        link: "https://www.zikorabank.com/"
     },
 ]
 

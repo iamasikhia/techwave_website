@@ -10,6 +10,7 @@ const dashboardBlogs = '/dashboard/blogs';
 const createBlog = '/dashboard/blogs/create';
 const editBlog = '/dashboard/blogs/edit/:id';
 const editBlogId = '/dashboard/blogs/edit';
+const ourStory = '/our-story';
 
 export const routes = {
   home,
@@ -24,4 +25,5 @@ export const routes = {
   editBlogId,
   blogDetails,
   community,
+  ourStory,
 };
