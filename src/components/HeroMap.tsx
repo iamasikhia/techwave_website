@@ -1,7 +1,4 @@
 import MapSvg from "@/assets/images/map.svg";
-import P2 from "@/assets/images/p2.svg";
-import P3 from "@/assets/images/p3.svg";
-import P4 from "@/assets/images/p4.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -95,6 +92,78 @@ function AvatarAfricaSouth() {
   );
 }
 
+// Americas — New York
+function AvatarAmericas() {
+  return (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full rounded-full">
+      <circle cx="50" cy="50" r="50" fill="#fff7ed" />
+      <ellipse cx="50" cy="90" rx="30" ry="22" fill="#FFB804" />
+      <rect x="44" y="62" width="12" height="12" rx="4" fill="#C68642" />
+      <circle cx="50" cy="46" r="20" fill="#C68642" />
+      <ellipse cx="50" cy="30" rx="20" ry="14" fill="#7B3F00" />
+      <rect x="30" y="33" width="40" height="9" rx="2" fill="#7B3F00" />
+      <ellipse cx="30" cy="47" rx="4" ry="5" fill="#C68642" />
+      <ellipse cx="70" cy="47" rx="4" ry="5" fill="#C68642" />
+      <ellipse cx="43" cy="44" rx="3" ry="3.5" fill="#3B1F00" />
+      <ellipse cx="57" cy="44" rx="3" ry="3.5" fill="#3B1F00" />
+      <circle cx="44" cy="43" r="1" fill="white" />
+      <circle cx="58" cy="43" r="1" fill="white" />
+      <ellipse cx="50" cy="51" rx="2.5" ry="1.5" fill="#A0522D" />
+      <path d="M44 56 Q50 62 56 56" stroke="#A0522D" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// Europe — London
+function AvatarEurope() {
+  return (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full rounded-full">
+      <circle cx="50" cy="50" r="50" fill="#eff6ff" />
+      <ellipse cx="50" cy="90" rx="30" ry="22" fill="#3B82F6" />
+      <rect x="44" y="62" width="12" height="12" rx="4" fill="#FDDCB5" />
+      <circle cx="50" cy="46" r="20" fill="#FDDCB5" />
+      {/* Wavy hair */}
+      <ellipse cx="50" cy="29" rx="21" ry="13" fill="#8B5E3C" />
+      <circle cx="30" cy="38" r="8" fill="#8B5E3C" />
+      <circle cx="70" cy="38" r="8" fill="#8B5E3C" />
+      <ellipse cx="30" cy="47" rx="4" ry="5" fill="#FDDCB5" />
+      <ellipse cx="70" cy="47" rx="4" ry="5" fill="#FDDCB5" />
+      <ellipse cx="43" cy="44" rx="3" ry="3.5" fill="#2D4A7A" />
+      <ellipse cx="57" cy="44" rx="3" ry="3.5" fill="#2D4A7A" />
+      <circle cx="44" cy="43" r="1" fill="white" />
+      <circle cx="58" cy="43" r="1" fill="white" />
+      <ellipse cx="50" cy="51" rx="2.5" ry="1.5" fill="#D4956A" />
+      <path d="M44 56 Q50 62 56 56" stroke="#D4956A" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// South Asia — India
+function AvatarSouthAsia() {
+  return (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="w-full h-full rounded-full">
+      <circle cx="50" cy="50" r="50" fill="#fdf4ff" />
+      <ellipse cx="50" cy="90" rx="30" ry="22" fill="#9333EA" />
+      <rect x="44" y="62" width="12" height="12" rx="4" fill="#D4956A" />
+      <circle cx="50" cy="46" r="20" fill="#D4956A" />
+      {/* Long dark hair */}
+      <ellipse cx="50" cy="29" rx="21" ry="13" fill="#1A0800" />
+      <rect x="29" y="35" width="7" height="36" rx="3.5" fill="#1A0800" />
+      <rect x="64" y="35" width="7" height="36" rx="3.5" fill="#1A0800" />
+      <ellipse cx="30" cy="47" rx="4" ry="5" fill="#D4956A" />
+      <ellipse cx="70" cy="47" rx="4" ry="5" fill="#D4956A" />
+      <ellipse cx="43" cy="44" rx="3" ry="3.5" fill="#1A0800" />
+      <ellipse cx="57" cy="44" rx="3" ry="3.5" fill="#1A0800" />
+      <circle cx="44" cy="43" r="1" fill="white" />
+      <circle cx="58" cy="43" r="1" fill="white" />
+      {/* Bindi */}
+      <circle cx="50" cy="36" r="2" fill="#E11D48" />
+      <ellipse cx="50" cy="51" rx="2.5" ry="1.5" fill="#B8734A" />
+      <path d="M44 56 Q50 62 56 56" stroke="#B8734A" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 type Pin = {
   src?: string;
   Component?: React.FC;
@@ -108,17 +177,17 @@ type Pin = {
 
 const pins: Pin[] = [
   // Americas — New York
-  { src: P3, x: "17%",  y: "32%", delay: 0,    floatDelay: "0s",    size: "w-9 h-9",   beaconColor: "#FFB804" },
+  { Component: AvatarAmericas,   x: "17%",  y: "32%", delay: 0,    floatDelay: "0s",    size: "w-9 h-9",   beaconColor: "#FFB804" },
   // West Africa — Nigeria (larger, focal point)
-  { Component: AvatarAfricaWest, x: "43%", y: "57%", delay: 0.15, floatDelay: "0.5s", size: "w-11 h-11", beaconColor: "#338B74" },
+  { Component: AvatarAfricaWest, x: "43%",  y: "57%", delay: 0.15, floatDelay: "0.5s",  size: "w-11 h-11", beaconColor: "#338B74" },
   // Europe — London
-  { src: P4, x: "46%",  y: "22%", delay: 0.3,  floatDelay: "1.1s",  size: "w-9 h-9",   beaconColor: "#338B74" },
+  { Component: AvatarEurope,     x: "46%",  y: "22%", delay: 0.3,  floatDelay: "1.1s",  size: "w-9 h-9",   beaconColor: "#338B74" },
   // East Africa — Kenya
-  { Component: AvatarAfricaEast, x: "58%", y: "57%", delay: 0.45, floatDelay: "1.6s", size: "w-9 h-9",  beaconColor: "#338B74" },
+  { Component: AvatarAfricaEast, x: "58%",  y: "57%", delay: 0.45, floatDelay: "1.6s",  size: "w-9 h-9",   beaconColor: "#338B74" },
   // South Asia — India
-  { src: P2, x: "69%",  y: "40%", delay: 0.6,  floatDelay: "2.0s",  size: "w-9 h-9",   beaconColor: "#FFB804" },
+  { Component: AvatarSouthAsia,  x: "69%",  y: "40%", delay: 0.6,  floatDelay: "2.0s",  size: "w-9 h-9",   beaconColor: "#FFB804" },
   // Southern Africa — South Africa
-  { Component: AvatarAfricaSouth, x: "52%", y: "75%", delay: 0.75, floatDelay: "0.8s", size: "w-9 h-9", beaconColor: "#338B74" },
+  { Component: AvatarAfricaSouth,x: "52%",  y: "75%", delay: 0.75, floatDelay: "0.8s",  size: "w-9 h-9",   beaconColor: "#338B74" },
 ];
 
 export default function HeroMap() {

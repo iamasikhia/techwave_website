@@ -106,14 +106,16 @@ export default function WatergateStory() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Becoming a founding member of WGFI</h2>
             <p className="text-base text-gray-600 leading-relaxed mb-4">
               This encounter inspired me to become one of the founding members of the Watergate
-              Fountain Institute (WGFI), a free vocational training initiative built on the belief
-              that practical skills can open doors that formal education sometimes cannot.
+              Fountain Institute (WGFI), a non-profit vocational training initiative built on the
+              belief that practical skills can open doors that formal education sometimes cannot.
+              Everything we do is free. Every programme, every session, every mentorship hour — no
+              cost to the student, ever.
             </p>
             <p className="text-base text-gray-600 leading-relaxed">
               Working alongside a dedicated team of volunteers, we built a programme from the
-              ground up. No tuition fees. No prerequisites. Just a commitment to show up, learn,
-              and grow. WGFI was designed to meet young people where they were and equip them
-              with tools they could immediately put to use.
+              ground up. No tuition fees. No prerequisites. We also provide accommodation and
+              feeding for our students throughout the programme. WGFI removes every possible
+              barrier so that nothing stands between a young person and the skills they need.
             </p>
           </div>
 
