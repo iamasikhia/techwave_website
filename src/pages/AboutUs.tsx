@@ -80,7 +80,7 @@ export default function AboutUs() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12" data-sr>
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-5 uppercase tracking-wider">
-                Since 2023
+                Since 2024
               </div>
               <h2 className="text-3xl md:text-4xl font-medium text-gray-950 mb-4 tracking-tight">
                 Creating impact across Africa
