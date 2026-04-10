@@ -51,7 +51,7 @@ export default function Home() {
               Training · Network · Mentorship
             </div>
 
-            <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-medium text-gray-950 mb-6 leading-[1.1] tracking-tight">
+            <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-medium text-gray-950 mb-6 leading-[1.15] tracking-tight whitespace-nowrap">
               Supporting Entrepreneurs
               <br />
               <span className="text-[#338B74]">Across Africa</span>
