@@ -14,6 +14,8 @@ import BlogDetails from './pages/BlogDetails'
 import { Toaster } from 'react-hot-toast';
 import Community from './pages/Community'
 import OurStory from './pages/OurStory'
+import EdifyStory from './pages/EdifyStory'
+import WatergateStory from './pages/WatergateStory'
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
           <Route path={routes.blog} element={<Blog />} />
           <Route path={routes.blogDetails} element={<BlogDetails />} />
           <Route path={routes.ourStory} element={<OurStory />} />
+          <Route path={routes.edifyStory} element={<EdifyStory />} />
+          <Route path={routes.watergateStory} element={<WatergateStory />} />
           <Route path={routes.contact} element={<ContactUs />} />
           <Route element={<ProtectedRoute />}>
             <Route path={routes.dashboardBlogs} element={<DashboardBlogs />} />

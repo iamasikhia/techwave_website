@@ -74,6 +74,70 @@ export default function AboutUs() {
           </div>
         </section>
 
+        {/* Impact Stats */}
+        <section className="bg-gray-50 border-t border-gray-100 px-6 py-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-5 uppercase tracking-wider">
+                Since 2023
+              </div>
+              <h2 className="text-3xl md:text-4xl font-medium text-gray-950 mb-4 tracking-tight">
+                Creating impact across Africa
+              </h2>
+              <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                Through technology consulting, product development, and entrepreneur support, we have worked
+                across fintech, healthcare, logistics, education, and more.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              {[
+                { stat: "10+", label: "Businesses supported", sub: "across Nigeria and Africa" },
+                { stat: "3,600+", label: "Entrepreneurs trained", sub: "through Watergate Fountain" },
+                { stat: "$200k+", label: "Funding raised", sub: "by businesses we built for" },
+                { stat: "5", label: "Industries served", sub: "Fintech, Health, Logistics, EdTech, Alumni" },
+              ].map((item) => (
+                <div key={item.label} className="bg-white rounded-2xl border border-gray-100 p-6 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-gray-950 mb-1">{item.stat}</div>
+                  <div className="text-sm font-semibold text-gray-700 mb-1">{item.label}</div>
+                  <div className="text-xs text-gray-400 leading-snug">{item.sub}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                {
+                  industry: "Fintech",
+                  color: "bg-[#F0FDFA] text-[#338B74]",
+                  dot: "bg-[#338B74]",
+                  description: "Built and consulted on mobile-first financial platforms serving hundreds of thousands of users across Africa, including Zikora and Hello Money.",
+                },
+                {
+                  industry: "Healthcare",
+                  color: "bg-[#FFF1F2] text-rose-500",
+                  dot: "bg-rose-400",
+                  description: "Delivered the digital platform for Clearline HMO, making health insurance more accessible to businesses and individuals across Nigeria.",
+                },
+                {
+                  industry: "Logistics",
+                  color: "bg-[#FFFBEB] text-amber-600",
+                  dot: "bg-amber-400",
+                  description: "Engineered and launched Logistics Hub's flagship mobile app on iOS and Android, contributing to 1,000+ active riders and $200k+ in funding.",
+                },
+              ].map((item) => (
+                <div key={item.industry} className="bg-white rounded-2xl border border-gray-100 p-6">
+                  <div className={`inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1 mb-4 ${item.color}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${item.dot}`} />
+                    {item.industry}
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Mission Section */}
         <section className="bg-[#0f1f1a] relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" aria-hidden>

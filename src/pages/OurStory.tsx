@@ -41,7 +41,7 @@ const milestones = [
     name: "Centri AI",
     tagline: "AI automations for businesses, Global.",
     description:
-      "Centri AI was founded on a simple belief: most businesses are leaving enormous value on the table because AI feels too complex to implement. We build custom AI automations that save you time, money, and headspace - from discovery call to live automation in as little as 5 days. We design, build, and deploy custom AI workflows that integrate with the tools your team already uses. We also train your team to understand, use, and manage these systems so you stay in control long-term. No black boxes, no vendor lock-in - just AI that works for you. Headquartered in Indiana, USA.",
+      "Centri AI was founded on a simple belief: most businesses are leaving enormous value on the table because AI feels too complex to implement. We build custom AI automations that save you time, money, and headspace - from discovery call to live automation in as little as 5 days. We design, build, and deploy custom AI workflows that integrate with the tools your team already uses. We also train your team to understand, use, and manage these systems so you stay in control long-term. Headquartered in Indiana, USA.",
     side: "right",
     color: "#1E3A5F",
     bgLight: "#EFF6FF",
@@ -195,7 +195,7 @@ function TimelineContent({ milestone: m }: { milestone: typeof milestones[0] }) 
       <p className="text-sm font-medium mb-3" style={{ color: m.color }}>
         {m.tagline}
       </p>
-      <p className="text-sm text-gray-500 leading-relaxed mb-5">
+      <p className="text-sm text-gray-500 leading-7 mb-5 text-left">
         {m.description}
       </p>
       {m.url && (

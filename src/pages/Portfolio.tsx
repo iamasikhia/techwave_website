@@ -1,5 +1,7 @@
 import HomeLayout from "@/layouts/HomeLayout";
 import { works } from "@/lib/data";
+import { Link } from "react-router-dom";
+import { routes } from "@/lib/route";
 
 export default function Portfolio() {
   return (
@@ -62,17 +64,37 @@ export default function Portfolio() {
                           </span>
                         ))}
                       </div>
-                      {work.link && (
-                        <a
-                          href={work.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-[#338B74] hover:text-[#2a7562] transition-colors"
-                        >
-                          Visit Site
-                          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                        </a>
-                      )}
+                      <div className="flex items-center gap-4">
+                        {work.title === "Edify" && (
+                          <Link
+                            to={routes.edifyStory}
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#338B74] hover:text-[#2a7562] transition-colors"
+                          >
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                          </Link>
+                        )}
+                        {work.title === "Watergate Fountain" && (
+                          <Link
+                            to={routes.watergateStory}
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#338B74] hover:text-[#2a7562] transition-colors"
+                          >
+                            Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                          </Link>
+                        )}
+                        {work.link && (
+                          <a
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#338B74] hover:text-[#2a7562] transition-colors"
+                          >
+                            Visit Site
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </article>

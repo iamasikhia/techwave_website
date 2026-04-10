@@ -11,6 +11,8 @@ const createBlog = '/dashboard/blogs/create';
 const editBlog = '/dashboard/blogs/edit/:id';
 const editBlogId = '/dashboard/blogs/edit';
 const ourStory = '/our-story';
+const edifyStory = '/portfolio/edify';
+const watergateStory = '/portfolio/watergate-fountain';
 
 export const routes = {
   home,
@@ -26,4 +28,6 @@ export const routes = {
   blogDetails,
   community,
   ourStory,
+  edifyStory,
+  watergateStory,
 };
