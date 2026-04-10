@@ -123,7 +123,7 @@ export default function StackedWhatWeDo() {
   return (
     <div
       ref={sectionRef}
-      className="relative z-10 bg-white mb-64"
+      className="relative z-10 bg-white"
       style={{ height: "230vh" }}
     >
       {/* Section Header */}
