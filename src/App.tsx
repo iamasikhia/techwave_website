@@ -20,27 +20,27 @@ import WatergateStory from './pages/WatergateStory'
 function App() {
 
   return (
-     <Router>
-        <Toaster position="top-right" />
-        <Routes>
-          <Route path={routes.home} element={<Home />} />
-          <Route path={routes.login} element={<Login />} />
-          <Route path={routes.about} element={<AboutUs />} />
-          <Route path={routes.portfolio} element={<Portfolio />} />
-          <Route path={routes.community} element={<Community />} />
-          <Route path={routes.blog} element={<Blog />} />
-          <Route path={routes.blogDetails} element={<BlogDetails />} />
-          <Route path={routes.ourStory} element={<OurStory />} />
-          <Route path={routes.edifyStory} element={<EdifyStory />} />
-          <Route path={routes.watergateStory} element={<WatergateStory />} />
-          <Route path={routes.contact} element={<ContactUs />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path={routes.dashboardBlogs} element={<DashboardBlogs />} />
-            <Route path={routes.createBlog} element={<CreateBlog />} />
-            <Route path={routes.editBlog} element={<CreateBlog />} />
-          </Route>
-        </Routes>
-     </Router>
+    <Router>
+      <Toaster position="top-right" />
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.login} element={<Login />} />
+        <Route path={routes.about} element={<AboutUs />} />
+        <Route path={routes.portfolio} element={<Portfolio />} />
+        <Route path={routes.community} element={<Community />} />
+        <Route path={routes.blog} element={<Blog />} />
+        <Route path={routes.blogDetails} element={<BlogDetails />} />
+        <Route path={routes.ourStory} element={<OurStory />} />
+        <Route path={routes.edifyStory} element={<EdifyStory />} />
+        <Route path={routes.watergateStory} element={<WatergateStory />} />
+        <Route path={routes.contact} element={<ContactUs />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path={routes.dashboardBlogs} element={<DashboardBlogs />} />
+          <Route path={routes.createBlog} element={<CreateBlog />} />
+          <Route path={routes.editBlog} element={<CreateBlog />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 

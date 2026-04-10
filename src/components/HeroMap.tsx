@@ -1,20 +1,20 @@
 import MapSvg from "@/assets/images/map.svg";
-import P1 from "@/assets/images/p1.svg";
 import P2 from "@/assets/images/p2.svg";
-import P3 from "@/assets/images/p3.svg";
 import P4 from "@/assets/images/p4.svg";
-import P5 from "@/assets/images/p5.svg";
 import P6 from "@/assets/images/p6.svg";
+import Avatar1 from "@/assets/images/avatar1.png";
+import Avatar2 from "@/assets/images/avatar2.png";
+import Avatar3 from "@/assets/images/avatar3.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const pins = [
-  { src: P3, x: "17%",  y: "32%", delay: 0,    floatDelay: "0s",    size: "w-9 h-9",   beaconColor: "#FFB804" },
-  { src: P5, x: "43%",  y: "57%", delay: 0.15, floatDelay: "0.5s",  size: "w-11 h-11", beaconColor: "#338B74" },
-  { src: P4, x: "46%",  y: "22%", delay: 0.3,  floatDelay: "1.1s",  size: "w-9 h-9",   beaconColor: "#338B74" },
-  { src: P1, x: "58%",  y: "57%", delay: 0.45, floatDelay: "1.6s",  size: "w-9 h-9",   beaconColor: "#338B74" },
-  { src: P2, x: "69%",  y: "40%", delay: 0.6,  floatDelay: "2.0s",  size: "w-9 h-9",   beaconColor: "#FFB804" },
-  { src: P6, x: "52%",  y: "75%", delay: 0.75, floatDelay: "0.8s",  size: "w-9 h-9",   beaconColor: "#338B74" },
+  { src: P4,      x: "17%",  y: "32%", delay: 0,    floatDelay: "0s",    size: "w-9 h-9",   beaconColor: "#FFB804" },
+  { src: Avatar1, x: "43%",  y: "57%", delay: 0.15, floatDelay: "0.5s",  size: "w-11 h-11", beaconColor: "#338B74" },
+  { src: P2,      x: "46%",  y: "22%", delay: 0.3,  floatDelay: "1.1s",  size: "w-9 h-9",   beaconColor: "#338B74" },
+  { src: Avatar2, x: "58%",  y: "57%", delay: 0.45, floatDelay: "1.6s",  size: "w-9 h-9",   beaconColor: "#338B74" },
+  { src: P6,      x: "69%",  y: "40%", delay: 0.6,  floatDelay: "2.0s",  size: "w-9 h-9",   beaconColor: "#FFB804" },
+  { src: Avatar3, x: "52%",  y: "75%", delay: 0.75, floatDelay: "0.8s",  size: "w-9 h-9",   beaconColor: "#338B74" },
 ];
 
 export default function HeroMap() {
