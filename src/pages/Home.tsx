@@ -65,17 +65,17 @@ export default function Home() {
 
             <div className="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
-                to={routes.contact}
+                to={routes.community}
                 className="inline-flex items-center gap-2 bg-[#338B74] hover:bg-[#2a7562] text-white rounded-full px-7 py-3 font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#338B74]/25"
               >
-                Work With Us
+                Join Our Community
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
               <Link
                 to={routes.portfolio}
                 className="inline-flex items-center gap-2 border border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900 rounded-full px-7 py-3 font-medium transition-all duration-200"
               >
-                See Our Solutions
+                Impact Driven Projects
               </Link>
             </div>
 

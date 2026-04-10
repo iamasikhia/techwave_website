@@ -21,7 +21,7 @@ const milestones = [
     urlLabel: "Visit Watergate Fountain",
   },
   {
-    year: "2023",
+    year: "2024",
     scope: "Africa",
     name: "Techwave Africa",
     tagline: "Technology enablement and training for entrepreneurs, Africa.",
