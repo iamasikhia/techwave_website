@@ -48,7 +48,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="hero-badge inline-flex items-center gap-2 bg-[#338B74]/8 border border-[#338B74]/20 text-[#338B74] text-sm font-medium rounded-full px-4 py-1.5 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[#338B74]" />
-              Training · Network · Mentorship
+              Technology Enablement · Network · Mentorship
             </div>
 
             <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-medium text-gray-950 mb-6 leading-[1.15] tracking-tight whitespace-nowrap">
