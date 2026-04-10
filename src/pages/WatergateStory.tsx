@@ -67,7 +67,7 @@ export default function WatergateStory() {
 
         {/* Stats */}
         <section className="bg-gray-50 border-y border-gray-100 px-6 py-12 mb-16">
-          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6" data-sr-group>
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-gray-950 mb-1">{s.value}</div>
@@ -78,7 +78,7 @@ export default function WatergateStory() {
         </section>
 
         {/* Content */}
-        <section className="max-w-3xl mx-auto px-6 pb-24 space-y-12">
+        <section className="max-w-3xl mx-auto px-6 pb-24 space-y-12" data-sr>
 
           {/* The Encounter */}
           <div>
@@ -123,7 +123,7 @@ export default function WatergateStory() {
               What We Taught
             </div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Skills that create real livelihoods</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-sr-group>
               {programmes.map((p) => (
                 <div key={p.title} className="bg-gray-50 rounded-2xl border border-gray-100 p-5">
                   <h3 className="text-sm font-semibold text-gray-900 mb-2">{p.title}</h3>

@@ -65,10 +65,11 @@ export default function AboutUs() {
                 Work With Us
               </Link>
               <Link
-                to={routes.portfolio}
+                to={routes.ourStory}
                 className="inline-flex items-center gap-2 border border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 text-gray-700 rounded-full px-7 py-3 font-medium transition-all duration-200"
               >
-                See Our Solutions
+                Our Story
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
             </div>
           </div>
@@ -77,7 +78,7 @@ export default function AboutUs() {
         {/* Impact Stats */}
         <section className="bg-gray-50 border-t border-gray-100 px-6 py-16">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-sr>
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-5 uppercase tracking-wider">
                 Since 2023
               </div>
@@ -90,7 +91,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12" data-sr-group>
               {[
                 { stat: "10+", label: "Businesses supported", sub: "across Nigeria and Africa" },
                 { stat: "3,600+", label: "Entrepreneurs trained", sub: "through Watergate Fountain" },
@@ -105,7 +106,7 @@ export default function AboutUs() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4" data-sr-group>
               {[
                 {
                   industry: "Fintech",
@@ -139,7 +140,7 @@ export default function AboutUs() {
         </section>
 
         {/* Mission Section */}
-        <section className="bg-[#0f1f1a] relative overflow-hidden">
+        <section className="bg-[#0f1f1a] relative overflow-hidden" data-sr>
           <div className="absolute inset-0 pointer-events-none" aria-hidden>
             <div className="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-[#338B74]/10 blur-3xl" />
             <div className="absolute right-0 bottom-0 w-80 h-80 rounded-full bg-[#338B74]/8 blur-3xl" />
@@ -181,7 +182,7 @@ export default function AboutUs() {
         {/* Process Section */}
         <section className="bg-gray-50 border-t border-gray-100 py-20 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-14">
+            <div className="text-center mb-14" data-sr>
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-5 uppercase tracking-wider">
                 Your Journey
               </div>
@@ -193,7 +194,7 @@ export default function AboutUs() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-sr-group>
               {processSteps.map((step) => (
                 <div key={step.title} className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">

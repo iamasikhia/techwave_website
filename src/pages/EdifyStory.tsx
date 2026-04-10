@@ -61,7 +61,7 @@ export default function EdifyStory() {
 
         {/* Stats */}
         <section className="bg-gray-50 border-y border-gray-100 px-6 py-12 mb-16">
-          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6" data-sr-group>
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-gray-950 mb-1">{s.value}</div>
@@ -72,7 +72,7 @@ export default function EdifyStory() {
         </section>
 
         {/* Content */}
-        <section className="max-w-3xl mx-auto px-6 pb-24 space-y-12">
+        <section className="max-w-3xl mx-auto px-6 pb-24 space-y-12" data-sr>
 
           {/* About Edify */}
           <div>

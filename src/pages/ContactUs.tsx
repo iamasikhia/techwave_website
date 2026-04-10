@@ -60,7 +60,7 @@ export default function ContactUs() {
         {/* Contact Form */}
         <section className="bg-gray-50 border-t border-gray-100 px-6 py-16">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden" data-sr>
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Left: Image + Contact Info */}
                 <div className="p-8 border-b lg:border-b-0 lg:border-r border-gray-100">

@@ -129,7 +129,7 @@ export default function Community() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-sr-group>
               {pillars.map((p) => (
                 <div
                   key={p.title}
@@ -155,7 +155,7 @@ export default function Community() {
             <div className="inline-flex items-center gap-2 bg-[#338B74]/15 border border-[#338B74]/30 text-[#6ee7b7] text-xs font-semibold rounded-full px-3.5 py-1.5 mb-8 uppercase tracking-wider">
               Our Belief
             </div>
-            <blockquote className="text-2xl md:text-3xl font-medium text-white leading-relaxed mb-10">
+            <blockquote className="text-2xl md:text-3xl font-medium text-white leading-relaxed mb-10" data-sr>
               "Africa does not lack talent, ideas, or ambition. What our entrepreneurs need
               is the <span className="text-[#338B74]">right skills</span>, the{" "}
               <span className="text-[#338B74]">right people</span>, and the{" "}

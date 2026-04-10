@@ -107,7 +107,7 @@ export default function OurStory() {
 
               <div className="flex flex-col gap-20">
                 {milestones.map((m, i) => (
-                  <div key={m.year} className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                  <div key={m.year} data-sr className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
 
                     {/* Left column */}
                     <div className={`w-full md:w-[calc(50%-32px)] ${m.side === "right" ? "md:pr-10 md:text-right" : "md:order-3 md:pl-10 md:text-left"}`}>

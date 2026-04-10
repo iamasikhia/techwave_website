@@ -30,7 +30,7 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <section className="bg-gray-50 border-t border-gray-100 px-6 py-16">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-sr-group>
               {works.map((work, index) => (
                 <article
                   key={index}
