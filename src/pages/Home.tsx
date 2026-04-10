@@ -4,10 +4,7 @@ import company6 from "@/assets/images/7.svg";
 import Company4 from "@/assets/images/8.png";
 import Company5 from "@/assets/images/5.svg";
 import WatergateLogo from "@/assets/images/watergatelogo.png";
-import BlogImage from "@/assets/images/blog.png";
-import { useGetBlogs } from "@/lib/api";
-import { works, type Blog } from "@/lib/data";
-import { truncate } from "@/lib/utils";
+import { works } from "@/lib/data";
 import { Link } from "react-router-dom";
 import { routes } from "@/lib/route";
 import StackedWhatWeDo from "@/components/StackedCards";
@@ -19,13 +16,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const { data: blogData, isLoading: blogsLoading } = useGetBlogs(1, 3);
-  const blogs = (blogData && (blogData.items ?? blogData)) || [];
-
   const companiesRef = useRef<HTMLDivElement>(null);
   const worksRef = useRef<HTMLDivElement>(null);
-  const blogsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const heroTimeline = gsap.timeline({ delay: 0.15 });
     heroTimeline
@@ -43,11 +35,6 @@ export default function Home() {
     ScrollTrigger.create({
       trigger: worksRef.current, start: "top 80%",
       animation: gsap.fromTo(".work-card", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out", stagger: 0.15 }),
-    });
-
-    ScrollTrigger.create({
-      trigger: blogsRef.current, start: "top 80%",
-      animation: gsap.fromTo(".blog-card", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out", stagger: 0.12 }),
     });
 
     return () => { ScrollTrigger.getAll().forEach((t) => t.kill()); };

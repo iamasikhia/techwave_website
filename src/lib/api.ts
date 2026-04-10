@@ -147,7 +147,7 @@ export const blogApi = {
         return response.data;
     },
 
-    contactUs: async (data: { name: string; email: string; interest: string; budget: string; message: string }) => {
+    contactUs: async (data: { name: string; email: string; message: string }) => {
         const response = await api.post('/auth/contact-us', data);
         return response.data;
     },

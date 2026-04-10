@@ -17,7 +17,7 @@ const milestones = [
     bgLight: "#EFF6FF",
     image: WatergatePic,
     image2: WatergatePic2,
-    url: "http://localhost:8081/about.html",
+    url: "https://watergatefountain.techwaveafrica.com",
     urlLabel: "Visit Watergate Fountain",
   },
   {

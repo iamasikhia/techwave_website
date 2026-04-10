@@ -11,7 +11,7 @@ export const works = [
         title: "Watergate Fountain",
         summary: "Watergate Fountain is a free entrepreneurship and research training programme equipping Nigerians with vocational and business skills. In four years, we have graduated 3,600 trainees: 2,600 entrepreneurs and 1,000 research students, creating meaningful employment pathways and driving economic growth driven by SDG 8: Decent Work and Economic Growth.",
         technologies: ["Entrepreneurship Training", "Research", "Mentorship"],
-        link: null
+        link: "https://watergatefountain.techwaveafrica.com"
     },
     {
         image: Edify,
