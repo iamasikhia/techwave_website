@@ -26,20 +26,20 @@ export default function Footer() {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-[#338B74]/20 to-transparent" />
           </div>
 
-          <div className="relative max-w-4xl mx-auto px-8 py-20 text-center">
+          <div className="relative max-w-4xl mx-auto px-6 py-16 md:py-20 text-center">
             <div className="inline-flex items-center gap-2 bg-[#338B74]/15 border border-[#338B74]/30 text-[#6ee7b7] text-sm font-medium rounded-full px-4 py-1.5 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-[#6ee7b7] animate-pulse" />
               Join the movement
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-medium text-white mb-5 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-5 leading-tight tracking-tight">
               Africa's entrepreneurs
               <br />
               <span className="text-[#338B74]">are ready to build.</span>
             </h2>
 
             <p className="text-base text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
-              Get access to technology training, a community of driven founders, and mentors
+              Get access to technology enablement, a community of driven founders, and mentors
               who have walked the path. Your next chapter starts here.
             </p>
 
@@ -67,7 +67,7 @@ export default function Footer() {
       {/* Footer Bar */}
       <footer className="bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-4">
             <Link to={routes.home} className="flex items-center shrink-0">
               <img src={logo} alt="Techwave Africa" className="h-7 w-auto" />
             </Link>

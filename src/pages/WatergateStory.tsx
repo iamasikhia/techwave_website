@@ -55,12 +55,12 @@ export default function WatergateStory() {
             <img
               src={WatergatePic}
               alt="Watergate Fountain Institute"
-              className="w-full h-64 md:h-80 object-cover rounded-2xl"
+              className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-2xl"
             />
             <img
               src={WatergatePic2}
               alt="Watergate Fountain trainees"
-              className="w-full h-64 md:h-80 object-cover rounded-2xl"
+              className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-2xl"
             />
           </div>
         </div>

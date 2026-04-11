@@ -14,7 +14,7 @@ const works = [
     id: "training",
     color: "bg-[#FFFBEB]",
     title: "Technology Enablement",
-    text: "Skills are the foundation of every successful business. We equip African entrepreneurs with practical, hands-on technology training - from no-code tools and digital marketing to software development and AI literacy. Our programs meet you where you are and build the confidence to compete globally.",
+    text: "Skills are the foundation of every successful business. We equip African entrepreneurs with practical, hands-on technology enablement - from no-code tools and digital marketing to software development and AI literacy. Our programs meet you where you are and build the confidence to compete globally.",
     cta: "Start Learning",
     Illustration: TrainingIllustration,
   },
@@ -153,28 +153,28 @@ export default function StackedWhatWeDo() {
               {/* Always-rendered content — opacity controlled by GSAP */}
               <div
                 ref={(el) => { contentsRef.current[index] = el; }}
-                className="h-full grid lg:grid-cols-2 gap-8 items-center px-6 lg:px-12 py-8"
+                className="h-full flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8 items-center px-5 lg:px-12 py-6 lg:py-8 overflow-hidden"
                 style={{ opacity: 0 }}
               >
                 {/* Text */}
-                <div className="space-y-5">
-                  <h3 className="text-2xl lg:text-4xl font-medium text-gray-950 leading-tight">
+                <div className="space-y-3 lg:space-y-5 w-full">
+                  <h3 className="text-xl lg:text-4xl font-medium text-gray-950 leading-tight">
                     {work.title}
                   </h3>
-                  <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm lg:text-lg text-gray-600 leading-relaxed line-clamp-4 lg:line-clamp-none">
                     {work.text}
                   </p>
                   <Link
                     to={routes.contact}
-                    className="inline-flex items-center gap-2 bg-[#338B74] hover:bg-[#2a7562] text-white rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#338B74]/25"
+                    className="inline-flex items-center gap-2 bg-[#338B74] hover:bg-[#2a7562] text-white rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-[#338B74]/25"
                   >
                     {work.cta}
                   </Link>
                 </div>
 
                 {/* Illustration */}
-                <div className="flex justify-center lg:justify-end">
-                  <div className="bg-transparent rounded-2xl p-4 lg:p-6 w-full max-w-sm lg:max-w-md h-48 lg:h-64 flex items-center justify-center overflow-hidden">
+                <div className="flex justify-center lg:justify-end w-full">
+                  <div className="bg-transparent rounded-2xl p-2 lg:p-6 w-full max-w-[200px] lg:max-w-md h-32 lg:h-64 flex items-center justify-center overflow-hidden">
                     <work.Illustration />
                   </div>
                 </div>

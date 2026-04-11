@@ -46,12 +46,12 @@ export default function Home() {
         {/* Hero */}
         <section className="pt-28 md:pt-36 pb-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="hero-badge inline-flex items-center gap-2 bg-[#338B74]/8 border border-[#338B74]/20 text-[#338B74] text-sm font-medium rounded-full px-4 py-1.5 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#338B74]" />
+            <div className="hero-badge inline-flex items-center gap-2 bg-[#338B74]/8 border border-[#338B74]/20 text-[#338B74] text-xs sm:text-sm font-medium rounded-full px-4 py-1.5 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#338B74] shrink-0" />
               Technology Enablement · Network · Mentorship
             </div>
 
-            <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-medium text-gray-950 mb-6 leading-[1.15] tracking-tight whitespace-nowrap">
+            <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-medium text-gray-950 mb-6 leading-[1.15] tracking-tight">
               Supporting Entrepreneurs
               <br />
               <span className="text-[#338B74]">Across Africa</span>
@@ -110,7 +110,7 @@ export default function Home() {
         </section>
 
         {/* Our Work */}
-        <section className="bg-gray-50/50 border-t border-gray-100 px-6 py-20 pt-48" ref={worksRef}>
+        <section className="bg-gray-50/50 border-t border-gray-100 px-6 py-16" ref={worksRef}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-500 text-xs font-semibold rounded-full px-3.5 py-1.5 mb-5 uppercase tracking-wider">

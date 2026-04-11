@@ -26,7 +26,7 @@ const milestones = [
     name: "Techwave Africa",
     tagline: "Technology enablement and training for entrepreneurs, Africa.",
     description:
-      "Techwave Africa was founded to close the technology gap for African entrepreneurs. We provide hands-on technology training, digital skills development, and the enablement tools that founders need to build, launch, and scale in a digital-first world. From no-code platforms to AI tools, we equip entrepreneurs with practical skills they can apply immediately - because the right technology in the right hands changes everything.",
+      "Techwave Africa was founded to close the technology gap for African entrepreneurs. We provide hands-on technology enablement, digital skills development, and the tools that founders need to build, launch, and scale in a digital-first world. From no-code platforms to AI tools, we equip entrepreneurs with practical skills they can apply immediately - because the right technology in the right hands changes everything.",
     side: "left",
     color: "#338B74",
     bgLight: "#F0FDFA",
@@ -105,9 +105,9 @@ export default function OurStory() {
               {/* Centre line */}
               <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#338B74]/30 via-[#338B74]/60 to-[#338B74]/20 hidden md:block" />
 
-              <div className="flex flex-col gap-20">
+              <div className="flex flex-col gap-12 md:gap-20">
                 {milestones.map((m, i) => (
-                  <div key={m.year} data-sr className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
+                  <div key={m.year} data-sr className="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
 
                     {/* Left column */}
                     <div className={`w-full md:w-[calc(50%-32px)] ${m.side === "right" ? "md:pr-10 md:text-right" : "md:order-3 md:pl-10 md:text-left"}`}>

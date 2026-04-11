@@ -14,9 +14,9 @@ const pillars = [
       </svg>
     ),
     color: "bg-[#FFFBEB] text-amber-600",
-    title: "Technology Training",
+    title: "Technology Enablement",
     description:
-      "Practical, hands-on programmes that equip you with real digital skills, from building your first product to leveraging AI in your business. No jargon, no fluff. Just skills that work.",
+      "Practical, hands-on programmes that equip you with real digital skills and enable you to leverage technology in your business, from building your first product to integrating AI. No jargon, no fluff. Just skills that work.",
   },
   {
     icon: (
